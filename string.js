@@ -28,7 +28,7 @@ const color = "purple                 ";
 color.trim().toUpperCase();
 console.log(color);
 
-console.log("------------ Start (indexOf) --------------");
+console.log("<------------ Start (indexOf) -------------->");
 
 const a = "baseball".indexOf("ball");
 const b = "baseball".indexOf("b");
@@ -43,7 +43,7 @@ console.log(d);
 console.log(e);
 console.log(f);
 
-console.log("------------ Start slice method --------------");
+console.log("<------------ Start slice method -------------->");
 
 let string = "superhero";
 let slice = string.slice(0, 5);
@@ -68,4 +68,14 @@ console.log(addNameLetter);
 const superhero = "superhero";
 const he = superhero.slice(5, 7);
 console.log(he);
+
+const doller = "$50 - $60";
+const removeDellersSign = doller.slice(1);
+console.log(removeDellersSign);
+
+console.log("<------------ Start replace method -------------->");
+
+const name1 = "sazzad hossain umok";
+const replaceName = name1.replace("umok", "tomal").toUpperCase();
+console.log(replaceName);
 // 3 er 5 ses 6start //
