@@ -78,4 +78,43 @@ console.log("<------------ Start replace method -------------->");
 const name1 = "sazzad hossain umok";
 const replaceName = name1.replace("umok", "tomal").toUpperCase();
 console.log(replaceName);
-// 3 er 5 ses 6start //
+
+const sentence = "Baseball is entertaining";
+const replaceSentence = sentence.replace("entertaining", "Ok");
+console.log(replaceSentence);
+
+console.log("------------- Strings Quiz ------------");
+
+const age = "5" + "4";
+console.log(age);
+console.log("pecan pie"[7]);
+console.log("PUP"[3]);
+
+const song = "london calling".toUpperCase();
+
+console.log(song);
+
+let userInput = "   TODD@gmail.com";
+let cleanedInput = userInput.trim().toLowerCase();
+console.log(cleanedInput);
+
+let park = "Yellowstone";
+const index = park.indexOf("Stone"); // result -1
+console.log(index);
+
+const index1 = park.indexOf("Yellowstone"); // result - 0
+console.log(index1);
+
+const garbage = "GARBAGE";
+const sliceAndReplace = garbage.slice(2).replace("B", "");
+console.log(sliceAndReplace);
+
+const myName = "      ballusazzad";
+const currectionMyName = myName.trim().slice(5, -5).toUpperCase();
+
+const sliceMyname = myName.trim().slice(6);
+
+const currectName = currectionMyName + sliceMyname;
+console.log(currectName);
+
+// 3 er 5 ses 6 start //
