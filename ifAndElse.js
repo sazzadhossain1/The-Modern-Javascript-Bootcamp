@@ -43,3 +43,53 @@ if (sazzad === "Web Developer") {
 } else {
   console.log("sazzad's profesion is other");
 }
+
+const password = "hello kitty";
+
+if (password.length >= 6) {
+  if (password.indexOf(" ") === -1) {
+    console.log("Valid Password");
+  } else {
+    console.log("Password is long enough, but cannot contain spaces");
+  }
+} else {
+  console.log("passward must be longer");
+}
+
+//.........................................
+
+// let mystery = false;
+let mystery = true;
+
+if (mystery) {
+  console.log("my stery is truthy");
+} else {
+  console.log("my stery is falsy");
+}
+
+// let loggedInUser = "tomal993";
+// let loggedInUser = " ";
+// let loggedInUser = null;
+let loggedInUser = NaN;
+
+if (loggedInUser) {
+  console.log("You are logged in");
+} else {
+  console.log("Please log in");
+}
+
+console.log("------ && and || oprator ------");
+
+let userName = "Ssazzad";
+let passward = 1111;
+
+let email = "sazzadTomal1@gmail.com";
+
+if (
+  (userName === "Sazzad" && passward === 1111) ||
+  (email === "sazzadTomal1@gmail.com" && passward === 1111)
+) {
+  console.log("Welcome to home");
+} else {
+  console.log("Please sign up");
+}
