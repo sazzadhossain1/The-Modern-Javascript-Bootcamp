@@ -117,4 +117,26 @@ const sliceMyname = myName.trim().slice(6);
 const currectName = currectionMyName + sliceMyname;
 console.log(currectName);
 
-// 3 er 5 ses 6 start //
+const number = 3.1010101;
+console.log(Math.floor(number));
+console.log(Math.random(number));
+console.log(Math.round(number));
+
+const number1 = 3.66666;
+console.log(Math.round(number1));
+
+const ran = 500;
+
+const m = Math.random(ran) * 100;
+const mathFlore = Math.floor(m) + 1;
+console.log(mathFlore);
+
+// typeof
+//.......
+
+console.log(typeof "sazzad");
+console.log(typeof "2121212");
+console.log(typeof 2121212);
+console.log(typeof undefined);
+console.log(typeof null);
+// 3 er 10 ses 11 start //
