@@ -38,3 +38,13 @@ console.log(0 === "");
 
 console.log(0 == false);
 console.log(0 === false);
+
+console.log("--------- (! Operator) ---------");
+
+const saName = "sazzad";
+const toName = "tomal";
+console.log(saName === toName);
+console.log(saName !== toName);
+
+console.log(2 !== "2");
+console.log(2 !== 5);
