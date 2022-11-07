@@ -139,4 +139,10 @@ console.log(typeof "2121212");
 console.log(typeof 2121212);
 console.log(typeof undefined);
 console.log(typeof null);
-// 3 er 10 ses 11 start //
+
+//...............................
+
+console.log(parseInt("454"));
+console.log(parseInt("4343.44"));
+console.log(parseFloat("4343.44"));
+// 3 number finish //
