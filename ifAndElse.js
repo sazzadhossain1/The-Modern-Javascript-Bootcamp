@@ -114,4 +114,3 @@ if (!loggedInUser1) {
 } else {
   console.log("You are loged in");
 }
-// 4 er  11 ses 12 start
