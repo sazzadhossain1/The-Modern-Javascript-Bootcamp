@@ -93,3 +93,25 @@ if (
 } else {
   console.log("Please sign up");
 }
+
+let age = 76;
+if (age < 6 || age >= 65) {
+  console.log("You get in for free!");
+} else {
+  console.log("That will be $10 please");
+}
+
+const pass = 2222;
+if (pass !== 1111 && pass === 2222) {
+  console.log("Welcome to home");
+} else {
+  console.log("currection your password");
+}
+
+let loggedInUser1;
+if (!loggedInUser1) {
+  console.log("GET OUT OF HERE!");
+} else {
+  console.log("You are loged in");
+}
+// 4 er  11 ses 12 start
