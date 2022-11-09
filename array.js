@@ -96,4 +96,27 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 numbers.splice(3, 3, 1111, 22222, 33333, 44444, 55555);
 console.log(numbers);
-// 5 er 7 ses 8 start
+
+console.log("---------- sorting Method ----------");
+
+const listOfNumber = [33, 22, 55, 11, 66, 55, 77];
+// const sortingArray = listOfNumber.sort();
+// console.log(sortingArray);
+
+listOfNumber.sort(function (a, b) {
+  return a - b;
+});
+console.log(listOfNumber);
+console.log("-------------- Nasted Araray --------------");
+
+const arr = [
+  11,
+  33,
+  22,
+  ["Sazzad", " Hossain"],
+  [66, 77, "Tomal"],
+  "Sazzad is web developer",
+];
+
+const createName = arr[3] + " " + arr[4][2];
+console.log(createName);
