@@ -90,4 +90,20 @@ console.log(gamePlayersAccess);
 
 const gameBoardPropertyAccess = game.board[0][2];
 console.log(gameBoardPropertyAccess);
-// 6 er 4 ses 5 start
+
+//................................................
+
+const palette = {
+  red: "#eb4d4b",
+  yellow: "#f9ca24",
+  blue: "#30336b",
+};
+
+palette.green = "#Ebf876";
+console.log(palette);
+
+const palette2 = palette;
+console.log(palette2);
+
+palette2.darkBlue = "dark Blue";
+console.log(palette2);
