@@ -143,4 +143,21 @@ for (let i = 1; i <= 5; i++) {
   }
   console.log(dollers);
 }
+
+let number1 = 10;
+for (let i = 1; i <= number1; i++) {
+  let result = "";
+  for (let ind = 1; ind <= i; ind++) {
+    result += "$&*";
+  }
+  console.log(result);
+}
+
+for (let i = 10; i <= 50; i++) {
+  console.log(i);
+
+  if (i === 30) {
+    break;
+  }
+}
 // 7 er 2 ses 3 start
