@@ -72,4 +72,75 @@ for (let i = word.length - 1; i >= 0; i--) {
 
 console.log(revorseWord);
 
+console.log("-------- Nested Loops ---------");
+
+let str = "LOL";
+for (let i = 0; i <= 4; i++) {
+  console.log("Outer", i);
+  for (let index = 0; index < str.length; index++) {
+    console.log("  Inner:", str[index]);
+  }
+}
+
+const gameBoard = [
+  [4, 43, 56, 66],
+  [43, 64, 8, 43],
+  [3, 32, 16, 4],
+  [3, 4, 5, 6],
+];
+
+// for (let i = 0; i < gameBoard.length; i++) {
+//   let row = gameBoard[i];
+//   console.log(row);
+
+//   for (let inx = 0; inx < row.length; inx++) {
+//     console.log(row[inx]);
+//   }
+// }
+let total1 = 0;
+for (let i = 0; i < gameBoard.length; i++) {
+  let row = gameBoard[i];
+
+  for (let inx = 0; inx < row.length; inx++) {
+    total1 = total1 + row[i];
+  }
+}
+console.log(total1);
+
+let n = 5;
+for (let i = 1; i <= 5; i++) {
+  let result = "";
+  // console.log(i);
+  for (let inx = 1; inx <= i; inx++) {
+    result = result + inx + " ";
+  }
+  console.log(result);
+}
+console.log("-------- practice -----------");
+for (let i = 1; i <= 5; i++) {
+  let result = "";
+  for (let inx = 1; inx <= i; inx++) {
+    result += inx + " ";
+  }
+
+  console.log(result);
+}
+
+console.log("---- Nadted loop with *** ----");
+
+for (let i = 1; i <= 10; i++) {
+  let star = "";
+  for (let indx = 1; indx <= i; indx++) {
+    star += "*";
+  }
+  console.log(star);
+}
+
+for (let i = 1; i <= 5; i++) {
+  let dollers = "";
+  for (let ind = 1; ind <= i; ind++) {
+    dollers += "$$";
+  }
+  console.log(dollers);
+}
 // 7 er 2 ses 3 start

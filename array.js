@@ -118,5 +118,7 @@ const arr = [
   "Sazzad is web developer",
 ];
 
-const createName = arr[3] + " " + arr[4][2];
+// const createName = arr[3] + " " + arr[4][2];
+const createName = arr[3].join(" ") + " " + arr[4][2];
+
 console.log(createName);
