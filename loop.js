@@ -160,4 +160,55 @@ for (let i = 10; i <= 50; i++) {
     break;
   }
 }
-// 7 er 2 ses 3 start
+
+const friends = ["Solim", "Saidee", "Sagor", "Shojib"];
+
+for (let i = 0; i < friends.length; i++) {
+  console.log(friends[i]);
+}
+
+for (fri of friends) {
+  console.log(fri);
+}
+
+const magicSquare = [
+  [2, 7, 6],
+  [9, 5, 1],
+  [4, 3, 8],
+];
+
+for (let i = 0; i < magicSquare.length; i++) {
+  let row = magicSquare[i];
+  let sum = 0;
+  for (let inXxx = 0; inXxx < row.length; inXxx++) {
+    sum += row[inXxx];
+  }
+  console.log(`${row} summed to ${sum}`);
+}
+
+console.log("----- for of loop ------");
+
+for (row of magicSquare) {
+  let sum = 0;
+  for (num of row) {
+    sum += num;
+  }
+  console.log(`${row} summed to ${sum}`);
+}
+
+const movieReviews = {
+  arival: 9.5,
+  alien: 3.4,
+  amelie: 9,
+  "In Bruges": 5,
+  amadeus: 10,
+  "Kill Bill": 9,
+  "Little miss Sunshine": 3.4,
+  coraline: 8.5,
+};
+
+for (let movie of Object.keys(movieReviews)) {
+  console.log(movie, movieReviews[movie]);
+  // console.log(movie);
+}
+// 7 number ses 8 start
