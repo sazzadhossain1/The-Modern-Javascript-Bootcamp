@@ -180,4 +180,96 @@ function lol() {
   console.log(person, age, color1);
 }
 lol();
-// 9 number er 1 number ses 2 number start
+
+//.......................................
+
+function doubleArr(arr) {
+  const result = [];
+  for (let num of arr) {
+    let double = num * 2;
+    result.push(double);
+  }
+  console.log(result);
+  return result;
+}
+doubleArr([1, 2, 3]);
+
+console.log("---------------------------");
+
+function add(x, y) {
+  return x + y;
+}
+
+function subtract(x, y) {
+  return x - y;
+}
+
+function multiply(x, y) {
+  return x * y;
+}
+
+function divided1(x, y) {
+  return x / y;
+}
+
+const operation = [add, subtract, multiply, divided1];
+
+// console.log(operation[0](10, 20));
+// console.log(operation[1](10, 200));
+// console.log(operation[2](300, 200));
+// console.log(operation[3](400, 500));
+
+for (let func of operation) {
+  let result = func(30, 50);
+  console.log(result);
+}
+
+const thing = {
+  doSomething: multiply,
+};
+
+console.log(thing.doSomething(10, 2));
+
+console.log("------------------- practice ---------------");
+
+const addFun = (x, y) => {
+  return x + y;
+};
+
+const minusFun = (x, y) => {
+  return x - y;
+};
+
+const multiplyFun = (x, y) => {
+  return x * y;
+};
+
+const dividedFun = (x, y) => {
+  return x / y;
+};
+
+const allFunction = [addFun, minusFun, multiplyFun, dividedFun];
+console.log(allFunction[0](5000, 10000));
+console.log(allFunction[1](5000, 10000));
+console.log(allFunction[2](5000, 10000));
+console.log(allFunction[3](5000, 10000));
+
+console.log("--------- for of loop ----------");
+for (func of allFunction) {
+  let f = func(12, 23);
+  console.log(f);
+}
+
+const functionObject = {
+  addFunction: addFun,
+  minusFunction: minusFun,
+  multiplyFunction: multiplyFun,
+  dividedFunction: dividedFun,
+};
+
+console.log(functionObject.addFunction(10, 25));
+console.log(functionObject.minusFunction(25, 15));
+console.log(functionObject.multiplyFunction(25, 15));
+console.log(functionObject.dividedFunction(20, 50));
+
+// 9 number er 5 number ses 6 number start
