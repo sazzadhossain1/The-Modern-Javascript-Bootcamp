@@ -71,4 +71,3 @@ for (let i = 0; i < books.length; i++) {
 nums.forEach(function (num, indx) {
   console.log(`${indx}. You are ${num}`);
 });
-// 10 number er 1 number ses 2 number start

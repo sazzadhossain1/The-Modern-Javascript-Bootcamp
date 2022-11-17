@@ -29,3 +29,57 @@ words.map(function (wo) {
     console.log(wo);
   }
 });
+
+console.log("------------------");
+
+words.map(function (word) {
+  console.log(word.toUpperCase().split("").join("."));
+});
+
+console.log("-----------------------");
+
+const books = [
+  {
+    title: "Good Omens",
+    authors: ["Terry pratchett", "Neil Gaiman"],
+    rating: 4.25,
+  },
+  {
+    title: "Bone: The Complete Edition",
+    authors: ["jeff Smith"],
+    rating: 4.42,
+  },
+  {
+    title: "American Gods",
+    authors: ["Neil Gaiman"],
+    rating: 4.11,
+  },
+  {
+    title: "A Genteman in Moscow",
+    authors: ["Amor Towles"],
+    rating: 4.36,
+  },
+];
+
+books.map(function (book) {
+  const author = book.authors[0].toUpperCase().split("").join(".");
+  console.log(author);
+});
+
+const title = books.map(function (b) {
+  return b.title;
+});
+
+console.log(title[0]);
+
+const square = (x) => {
+  return x * x;
+};
+
+console.log(square(4));
+
+const isEven = (num) => {
+  return num % 2 === 0;
+};
+console.log(isEven(4));
+console.log(isEven(45));
