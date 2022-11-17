@@ -313,4 +313,69 @@ function pickOne(f1, f2) {
 console.log(pickOne(cry, rage));
 console.log(pickOne(rage, cry));
 
-// 9 number er 5 number ses 6 number start
+console.log("------------- returning function ------------");
+
+function multiplyBy(num) {
+  return function (x) {
+    const mul = num * x;
+    console.log(`${num} return a function and ${mul} is just a number`);
+  };
+}
+multiplyBy("Sazzad")(6);
+multiplyBy(5)(6);
+
+console.log("------- xxxx ------");
+
+function multiplyBy1(num) {
+  return function (x) {
+    return x * num;
+  };
+}
+
+const triple = multiplyBy1(3);
+console.log(triple(6));
+
+const double = multiplyBy1(2);
+console.log(double(6));
+
+const halve = multiplyBy1(0.5);
+console.log(halve(9));
+
+console.log("--------------------------");
+
+function makeBetweenFunc(x, y) {
+  return function (num) {
+    return num >= x && num <= y;
+  };
+}
+
+console.log(makeBetweenFunc(0, 51)(50));
+
+const isChild = (num) => {
+  return num >= 0 && num <= 18;
+};
+
+console.log(isChild(17));
+
+//......................................
+// function alertMethod() {
+//   alert("The Function is run with alert method");
+// }
+
+// setTimeout(alertMethod, 10000);
+
+//.......................................
+
+//  setTimeout(function () {
+//   alert("Code is running with alert method");
+// }, 5000);
+
+const btn = document.querySelector("button");
+
+btn.addEventListener(
+  "click",
+  function () {
+    alert("button is click with alert method ");
+  },
+  5000
+);
