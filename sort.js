@@ -72,4 +72,19 @@ const books1 = [
     genres: ["fiction"],
   },
 ];
-// 10 number er 6 number ses 7 number start
+
+const sortBook = books1.sort(function (a, b) {
+  return a.rating - b.rating;
+});
+
+const sortBooksAgain = books1.sort((a, b) => b.rating - a.rating);
+console.log(sortBooksAgain);
+
+const sortTitle = books1[1].genres.sort();
+console.log(sortTitle);
+
+const persone = ["sazzad", "hossain", "tomal", "shayla", "akther"];
+console.log(persone.sort());
+// console.log(Object.keys(books1[0]).length);
+
+// 10 number er 9 number ses 10number start
