@@ -220,4 +220,3 @@ const any2Authors = books1.some(function (book) {
 });
 
 console.log(any2Authors);
-// 10 number er 6 number ses 7 number start
