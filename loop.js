@@ -212,3 +212,11 @@ for (let movie of Object.keys(movieReviews)) {
   // console.log(movie);
 }
 // 7 number ses 8 start
+
+const persone = {
+  name: "Sazzad",
+  age: 26,
+};
+
+// console.log(Object.keys(persone).length);
+console.log(persone.size);

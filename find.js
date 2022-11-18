@@ -196,4 +196,28 @@ const everyStartWith = words.every(function (word) {
   word[0] === "d";
 });
 console.log(everyStartWith);
+
+const allGoodsBooks = books.every(function (book) {
+  return book.rating > 3.5;
+});
+console.log(allGoodsBooks);
+
+console.log("------ Books1 ------");
+
+const allBooksTitle = books1.every(function (boo) {
+  return boo.title;
+});
+console.log(allBooksTitle);
+
+const titleValue = books1.some(function (b) {
+  return b.title === "The Way of King";
+});
+
+console.log(titleValue);
+
+const any2Authors = books1.some(function (book) {
+  return book.authors.length === 2;
+});
+
+console.log(any2Authors);
 // 10 number er 6 number ses 7 number start
