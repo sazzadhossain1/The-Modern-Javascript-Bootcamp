@@ -85,6 +85,11 @@ console.log(sortTitle);
 
 const persone = ["sazzad", "hossain", "tomal", "shayla", "akther"];
 console.log(persone.sort());
-// console.log(Object.keys(books1[0]).length);
 
-// 10 number er 9 number ses 10number start
+console.log("-------xxxxx-------");
+const booksRatingSort = books1.sort((a, b) => {
+  return a - b;
+});
+
+console.log(booksRatingSort);
+// console.log(Object.keys(books1[0]).length);
