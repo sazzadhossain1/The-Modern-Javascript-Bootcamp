@@ -142,6 +142,49 @@ console.log(sumReduce);
 
 //..................................
 
+const votReduce = votes1.reduce((acc, val) => {
+  if (acc[val]) {
+    acc[val]++;
+  } else {
+    acc[val] = 1;
+  }
+  return acc;
+}, {});
+console.log(votReduce);
+
+//.....................................
+
+const ratingReduce = books1.reduce((acc, val) => {
+  return acc + val.rating;
+}, 0);
+console.log(ratingReduce);
+
 console.log("------ sort part ------");
 
 const prices = [400.5, 3000, 99.99, 35.99, 12.0, 9500];
+const persone = ["sazzad", "hossain", "tomal", "shayla", "akther"];
+
+const sortPersone = persone.sort();
+console.log(sortPersone);
+
+const sortNum = prices.sort((acc, val) => {
+  return acc - val;
+});
+console.log(sortNum);
+
+const sortNum1 = prices.sort((acc, val) => {
+  return val - acc;
+});
+console.log(sortNum1);
+
+const booksRatingSmallToBig = books1.sort((acc, val) => {
+  return acc.rating - val.rating;
+});
+console.log(booksRatingSmallToBig);
+
+console.log("-------Big To Small-------");
+
+const bookRatingBigToSmall = books1.sort((acc, val) => {
+  return val.rating - acc.rating;
+});
+console.log(bookRatingBigToSmall);
