@@ -370,12 +370,146 @@ console.log(isChild(17));
 //   alert("Code is running with alert method");
 // }, 5000);
 
-const btn = document.querySelector("button");
+// const btn = document.querySelector("button");
 
-btn.addEventListener(
-  "click",
-  function () {
-    alert("button is click with alert method ");
-  },
-  5000
-);
+// btn.addEventListener(
+//   "click",
+//   function () {
+//     alert("button is click with alert method ");
+//   },
+//   5000
+// );
+
+console.log("------default peramiter-------");
+
+const greet = (person, greeting = "hi", punctuation = "!") => {
+  console.log(`${greeting} ${person} ${punctuation}`);
+};
+greet("anya", "?");
+
+console.log("---------- Spread Operator -----------");
+
+function giveMeFour(a, b, c, d) {
+  console.log("a", a);
+  console.log("b", b);
+  console.log("c", c);
+  console.log("d", d);
+}
+giveMeFour(4, 5, 6, 7);
+
+const colors = ["red", "orange", "yellow", "green"];
+giveMeFour(...colors);
+
+//..................................................
+
+const cephalopods = [
+  "dumbo octopus",
+  "humboldt squid",
+  "flamboyant cuttlefish",
+];
+const gastropods = ["giant african snail", "banana slug", "variable neon slug"];
+const cnidaria = ["fire coral", "moon jelly"];
+
+const mollusca = [...cephalopods, ...gastropods];
+console.log(mollusca);
+
+const inverts = [
+  "Sazzad",
+  "Hossain",
+  "Tomal",
+  ...cnidaria,
+  ...gastropods,
+  ...cephalopods,
+];
+console.log(inverts);
+
+const name2 = "sazzad";
+console.log(name2.split(""));
+
+const spreadName = [...name2];
+console.log(spreadName);
+
+console.log("--------------- Spread Object ----------");
+
+const feline = {
+  legs: 4,
+  family: "Felidae",
+};
+
+const canine = {
+  family: "Caninae",
+  furry: true,
+  legs: 4,
+};
+
+const dog = {
+  ...canine,
+  isPet: true,
+  adorable: true,
+};
+
+console.log(dog);
+
+const useSpreadInObject = {
+  name: "Sazzad",
+  ...dog,
+  ...feline,
+  cephalopods,
+};
+console.log(useSpreadInObject);
+
+const houseCat = {
+  ...feline,
+  isGrumpy: true,
+  personality: "unpredctable",
+};
+console.log(houseCat);
+
+console.log("----------");
+
+const catDog = {
+  ...canine,
+  ...feline,
+};
+console.log(catDog);
+
+const num = [1, 2, 3, 4, 5, 6, 7, 8];
+const objectSpred = { ...num };
+console.log(objectSpred);
+
+const random = [..."hello", { ...catDog }];
+console.log(random);
+
+function sum() {
+  const argsArr = [...arguments];
+  return argsArr.reduce((total, currVall) => {
+    return total + currVall;
+  });
+}
+
+console.log(sum(1, 2, 3, 4, 5));
+
+console.log("--------- Rest Peramiter ----------");
+
+function sum(...nums) {
+  return nums.reduce((acc, val) => {
+    return acc + val;
+  });
+}
+console.log(sum(4, 5, 6, 7));
+
+const fullName = (first, last, ...titles) => {
+  console.log("first", first);
+  console.log("last", last);
+  console.log("titles", titles);
+};
+
+console.log(fullName("tom", "jones", "III", "order of the phoneix"));
+
+const multiply1 = (...num) => {
+  return num.reduce((acc, val) => {
+    return acc * val;
+  });
+};
+
+console.log(multiply1(2, 2, 2, 2));
