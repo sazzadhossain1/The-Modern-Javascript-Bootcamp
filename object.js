@@ -107,3 +107,93 @@ console.log(palette2);
 
 palette2.darkBlue = "dark Blue";
 console.log(palette2);
+
+console.log("------- Shorthand object propertiles --------");
+
+const getStats = (arr) => {
+  const max = Math.max(...arr);
+  const min = Math.min(...arr);
+  const sum = arr.reduce((sum, r) => {
+    return sum + r;
+  });
+  const avg = sum / arr.length;
+  return {
+    max: max,
+    min: min,
+    sum: sum,
+    avg: avg,
+  };
+};
+
+const reviews = [4.5, 5.0, 3.44, 2.8, 3.5, 4.0, 3.5];
+const stats = getStats(reviews);
+console.log(stats);
+
+console.log("------- another exemple --------");
+
+function pick(arr) {
+  const idx = Math.floor(Math.random()) * arr.length;
+  return idx;
+}
+function getCard() {
+  const values = [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "j",
+    "q",
+    "k",
+    "a",
+  ];
+
+  const suits = ["cluds", "spades", "hearts", "diamonds"];
+  const value = pick(values);
+  const suit = pick(suits);
+  return {
+    value: value,
+    suit: suit,
+  };
+}
+
+console.log(getCard());
+
+console.log("-----------Computed Properties------------");
+
+const role = "host";
+const person = "jools holland";
+
+const role2 = "Director";
+const person2 = "James Cameron";
+
+const team = {};
+team[role] = person;
+console.log(team);
+
+const director = {};
+director[role2] = person2;
+console.log(director);
+
+//...........................
+
+const team1 = {
+  [role]: person,
+  [role2]: person2,
+  [1 + 6 + 9]: "sixteen",
+};
+console.log(team1);
+
+function addProp(obj, k, v) {
+  const copy = { ...obj };
+  copy[k] = v;
+  return copy;
+}
+
+const result = addProp(team1, "happy", ":)");
+console.log(result);

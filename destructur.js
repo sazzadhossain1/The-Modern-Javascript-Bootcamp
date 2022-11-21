@@ -158,4 +158,17 @@ const [z, , , x, [h, , [, y]], l] = nastedArray;
 console.log(z, x, h, y, l);
 
 //.................................
-// 11 number ta ses
+
+let a1 = 10;
+let b1 = 20;
+
+// old way //
+let temp = a1;
+a1 = b1;
+b1 = temp;
+
+console.log(a1, b1);
+
+// new way //
+[b1, a1] = [a1, b1];
+console.log(b1, a1);
