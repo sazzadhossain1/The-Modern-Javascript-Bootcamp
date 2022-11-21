@@ -197,3 +197,33 @@ function addProp(obj, k, v) {
 
 const result = addProp(team1, "happy", ":)");
 console.log(result);
+
+///...........................................
+
+const math = {
+  numbers: [1, 2, 3, 4, 5],
+  add(x, y) {
+    return x + y;
+  },
+  multiply(x, y) {
+    return x * y;
+  },
+};
+console.log(math.add(1, 2));
+console.log(math.multiply(1, 2));
+
+//...................................
+
+const auth = {
+  userName: "Sazzad Hossain",
+  login() {
+    console.log("You are login");
+  },
+  logout() {
+    console.log("Good Buy");
+  },
+};
+
+auth.login();
+auth.logout();
+// 12 number er 4 ses 5  number start
