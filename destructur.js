@@ -106,4 +106,56 @@ function parseResponse([protocol, statusCode, contentType]) {
 }
 parseResponse(response);
 
+console.log("--------- Sumit Vai ----------");
+
+const user = {
+  id: 339,
+  name: "Sakib",
+  age: 35,
+  person: {
+    n: "sazzad",
+  },
+
+  education: {
+    degree: "Masters",
+  },
+};
+
+// old way //
+const nm = user.name;
+console.log(nm);
+
+const newName = user.person.n;
+console.log(newName);
+
+// New way //
+const { name, age } = user;
+console.log(`My name is ${name} and I am ${age} years old`);
+
+const {
+  person: { n },
+} = user;
+console.log(n);
+
+const {
+  education: { degree },
+} = user;
+console.log(degree);
+
+// const { education: { degree } = {} } = user;
+// console.log(degree);
+
+console.log("------Array Destructuring-------");
+
+const number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const [a, b] = number;
+console.log(a, b);
+const [c, , , , d, , , , t] = number;
+console.log(c, d, t);
+
+const nastedArray = [1, 2, 3, 4, [5, 6, [7, 8]], 9];
+const [z, , , x, [h, , [, y]], l] = nastedArray;
+console.log(z, x, h, y, l);
+
+//.................................
 // 11 number ta ses
