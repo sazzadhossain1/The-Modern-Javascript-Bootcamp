@@ -314,13 +314,20 @@ const annoyer = {
   },
 
   start() {
-    setInterval(() => {
+    this.timeId = setInterval(() => {
       console.log("dfdfaskdjfklsajdkls");
+      console.log(this);
     }, 3000);
+  },
+
+  stop() {
+    clearInterval(this.timeId);
+    console.log("Phew thank heavens hat is over");
   },
 };
 
-// console.log(annoyer.start());
-console.log(annoyer.pickPhrase());
-console.log(annoyer.colorFun());
+console.log(annoyer.start());
+// console.log(annoyer.pickPhrase());
+// console.log(annoyer.colorFun());
+console.log(annoyer.stop());
 // 12 number er 6 ses 7   number start
