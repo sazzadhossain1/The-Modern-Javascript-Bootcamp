@@ -180,6 +180,14 @@ const director = {};
 director[role2] = person2;
 console.log(director);
 
+//............ (practice computed properties) ..............
+const name = "yeasin";
+const age = 4.5;
+
+const object = {};
+object[name] = age;
+console.log(object);
+
 //...........................
 
 const team1 = {
@@ -198,7 +206,7 @@ function addProp(obj, k, v) {
 const result = addProp(team1, "happy", ":)");
 console.log(result);
 
-///...........................................
+// ///...........................................
 
 const math = {
   numbers: [1, 2, 3, 4, 5],
@@ -212,7 +220,35 @@ const math = {
 console.log(math.add(1, 2));
 console.log(math.multiply(1, 2));
 
-//...................................
+const add = function (x, y) {
+  return x + y;
+};
+console.log(add(10, 20));
+
+const math1 = (n) => {
+  return n + add(100, 200);
+};
+
+console.log(math1(50));
+
+const mathObject = {
+  numbers: [1, 2, 3, 4, 5, 6],
+  add: function (x, y) {
+    return x + y;
+  },
+
+  multiply: function (x, y) {
+    return x * y;
+  },
+};
+
+const getMathObjectPropertys = mathObject.add(5, 10);
+console.log(getMathObjectPropertys);
+
+const getMathObjectPropertys1 = mathObject.multiply(5, 10);
+console.log(getMathObjectPropertys1);
+
+// //...................................
 
 const auth = {
   userName: "Sazzad Hossain",
@@ -226,4 +262,65 @@ const auth = {
 
 auth.login();
 auth.logout();
-// 12 number er 4 ses 5  number start
+
+console.log("------------- this key word -------------");
+
+const person1 = {
+  first: "Sazzad",
+  last: "Hossain",
+  nickName: "Tomal",
+  fullName() {
+    // aikhane first, last, and nickName ke (distructure) korechi
+    const { first, last, nickName } = this;
+    return first + " " + last + " " + nickName;
+  },
+  printBio() {
+    const fullNm = this.fullName();
+    return `${fullNm} is my full name`;
+  },
+
+  laugh() {
+    const { nickName } = this;
+    return `${nickName} you will do it IN SHAA ALLAH`;
+  },
+};
+
+console.log(person1.fullName().toUpperCase());
+console.log(person1.printBio());
+
+console.log(person1.laugh());
+
+console.log("--------- Annoyomatic Demo -----------");
+
+const annoyer = {
+  phrases: [
+    "literally",
+    "cray cray",
+    "i can't even",
+    "Totes!",
+    "YOLO",
+    "Can't Stop, won't stop",
+  ],
+  pickPhrase() {
+    const { phrases } = this;
+    const idx = Math.floor(Math.random() * phrases.length);
+    return phrases[idx];
+  },
+
+  colorFun() {
+    const { phrases } = this;
+    const inx = Math.floor(Math.random() * phrases.length);
+    return phrases[inx];
+  },
+
+  start() {
+    setInterval(() => {
+      console.log("dfdfaskdjfklsajdkls");
+    }, 3000);
+  },
+};
+
+// console.log(annoyer.start());
+console.log(annoyer.pickPhrase());
+console.log(annoyer.colorFun());
+// 12 number er 6 ses 7   number start
