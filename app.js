@@ -26,4 +26,33 @@ for (let dn of don) {
     console.log(dn);
   });
 }
+
+const getTag = document.getElementsByTagName("li");
+console.log(getTag);
+
+console.log("---------- querySelectorA ---------");
+
+const hOne = document.querySelector("h1");
+console.log(hOne);
+
+const paragraph = document.querySelectorAll("p");
+console.log(paragraph);
+
+const inputFill = document.querySelectorAll("input");
+console.log(inputFill);
+
+const ulTags = document.querySelector("ul");
+console.log(ulTags);
+
+const litags = document.querySelector("li");
+console.log(litags);
+
+const allLiTags = document.querySelectorAll("li");
+console.log(allLiTags);
+
+const getImg = document.querySelector("img");
+console.log(getImg);
+
+const getOneLiTag = document.querySelector("body section ul li.special");
+console.log(getOneLiTag);
 // 13 number er 7 number ta ses 8 number ta start
