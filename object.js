@@ -330,4 +330,50 @@ console.log(annoyer.start());
 // console.log(annoyer.pickPhrase());
 // console.log(annoyer.colorFun());
 console.log(annoyer.stop());
-// 12 number er 6 ses 7   number start
+
+console.log("----- Putting It All Together_ Deck Of Cards ----");
+
+function makeDeck() {
+  const deck = [];
+  const suits = ["hearts", "diamonds", "spades", "clubs"];
+  const values = "1,2,3,4,5,6,7,8,9,10,J,Q,K,A";
+
+  for (let value of values.split(",")) {
+    for (let suit of suits) {
+      deck.push({ value: value, suit: suit });
+    }
+  }
+  return deck;
+}
+console.log(makeDeck());
+
+function drawCard(deck) {
+  return deck.pop();
+}
+
+// const myDeck = makeDeck eck);
+
+const myDeck = {
+  deck: [],
+  suits: ["hearts", "diamonds", "spades", "clubs"],
+  values: "1,2,3,4,5,6,7,8,9,10,J,Q,K,A",
+
+  initializeDeck() {
+    const { suits, values, deck } = this;
+    for (let value of values.split(",")) {
+      for (let suit of suits) {
+        deck.push({ value: value, suit: suit });
+      }
+    }
+    return deck;
+  },
+
+  drawCard() {
+    return this.deck.pop();
+  },
+};
+
+console.log(myDeck.initializeDeck());
+// 12 number er 9 and 10 number video ta abar korte hobe....
+
+// 12 number er 10 ses
