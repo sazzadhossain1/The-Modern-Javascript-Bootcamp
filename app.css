@@ -29,3 +29,15 @@ img {
   width: 100px;
   display: none;
 }
+
+.todo {
+  font-size: 30px;
+  color: orangered;
+}
+
+.done {
+  color: gray;
+  text-decoration: line-through;
+  opacity: 50%;
+  font-size: 30px;
+}

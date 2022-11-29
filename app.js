@@ -56,6 +56,8 @@ console.log(getImg);
 const getOneLiTag = document.querySelector("body section ul li.special");
 console.log(getOneLiTag);
 
+const getInput = document.querySelectorAll("input");
+
 getImg.addEventListener("mouseover", function () {
   this.style.width = "600px";
   getImg.style.borderRadius = "50px";
@@ -97,6 +99,9 @@ getButton.addEventListener("click", function () {
   getBTag.style.display = "block";
   getButton.style.display = "none";
   getBtn.style.display = "block";
+  getBTag.style.color = "darkblue";
+  getBTag.style.fontStyle = "italic";
+  getBTag.style.fontSize = "30px";
 });
 
 getBtn.addEventListener("click", function () {
@@ -105,4 +110,49 @@ getBtn.addEventListener("click", function () {
   getBTag.style.display = "none";
 });
 
-// 14 number er 0 number ta ses 1 number ta start
+console.log(getInput[0]);
+console.log(getInput[1]);
+console.log(getInput[2]);
+console.log(getInput[3].value);
+console.log(getInput[4]);
+
+const allLi = document.querySelectorAll("li");
+console.log(allLi[1].textContent);
+
+// for (let i = 0; i < allLi.length; i++) {
+//   allLi[i].innerText = "Change Li Text";
+// }
+
+// for (let li of allLi) {
+//   li.innerHTML = "<b>Use For of Loop</b>";
+// }
+
+pMain.style.color = "red";
+pMain.style.backgroundColor = "black";
+
+const colors = ["red", "green", "ornage", "blue", "purple", "pink"];
+
+// allLi.forEach(function (li, i) {
+//   const color = colors[i];
+//   li.style.color = color;
+// });
+
+// for (let i = 0; i < allLi.length; i++) {
+//   const color = colors;
+
+//   allLi[i].style.color = color[i];
+//   console.log(allLi[i], color[i]);
+// }
+
+//............................................
+
+const todo = document.querySelector("#todos .todo");
+console.log(todo);
+
+// todo.style.color = "gray";
+// todo.style.textDecoration = "line-through";
+// todo.style.opacity = "50%";
+
+todo.setAttribute("class", "done");
+todo.classList.remove("done");
+// 14 number er 8 number ta ses 9  number ta start
