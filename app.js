@@ -132,17 +132,17 @@ pMain.style.backgroundColor = "black";
 
 const colors = ["red", "green", "ornage", "blue", "purple", "pink"];
 
-// allLi.forEach(function (li, i) {
-//   const color = colors[i];
-//   li.style.color = color;
-// });
+allLi.forEach(function (li, i) {
+  const color = colors[i];
+  li.style.color = color;
+});
 
-// for (let i = 0; i < allLi.length; i++) {
-//   const color = colors;
+for (let i = 0; i < allLi.length; i++) {
+  const color = colors;
 
-//   allLi[i].style.color = color[i];
-//   console.log(allLi[i], color[i]);
-// }
+  allLi[i].style.color = color[i];
+  console.log(allLi[i], color[i]);
+}
 
 //............................................
 
@@ -155,4 +155,40 @@ console.log(todo);
 
 todo.setAttribute("class", "done");
 todo.classList.remove("done");
-// 14 number er 8 number ta ses 9  number ta start
+
+//.............................................
+
+const newH2 = document.createElement("h2");
+
+newH2.innerHTML = "I like Animals";
+newH2.classList.add("special");
+console.log(newH2);
+
+const getSection = document.querySelector("section");
+console.log(getSection);
+getSection.appendChild(newH2);
+
+const newImg = document.createElement("img");
+console.log(newImg);
+newImg.src =
+  "https://i0.wp.com/blog.pettravel.com/wp-content/uploads/2019/11/michael-hardy-hLbi5hve5Yc-unsplash.jpg?resize=940%2C627&ssl=1";
+
+const getBody = document.querySelector("body");
+console.log(getBody);
+
+getBody.appendChild(newImg);
+
+newImg.style.width = "700px";
+newImg.style.borderRadius = "50px";
+
+const brTag = document.createElement("br");
+getBody.appendChild(brTag);
+
+const newALink = document.createElement("a");
+newALink.innerText = "Youtube Channel Link";
+newALink.href = "https://www.youtube.com/watch?v=oRDRfikj2z8";
+newALink.target = "blank";
+console.log(newALink);
+
+getBody.appendChild(newALink);
+// 14 number er 12 number ta ses 13  number ta start

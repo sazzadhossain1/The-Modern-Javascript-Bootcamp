@@ -188,3 +188,18 @@ const bookRatingBigToSmall = books1.sort((acc, val) => {
   return val.rating - acc.rating;
 });
 console.log(bookRatingBigToSmall);
+
+console.log("=========== xxxxxxx ==========");
+
+const getLi = document.querySelectorAll("li");
+const colors = ["red", "green", "orangered", "blue", "purple", "pink"];
+
+// getLi.forEach(function (li, i) {
+//   li.style.color = colors[i];
+// });
+
+for (let i = 0; i < getLi.length; i++) {
+  // getLi[i].style.color = colors[i];
+  getLi[i].style.backgroundColor = colors[i];
+  console.log(getLi[i], colors[i]);
+}
