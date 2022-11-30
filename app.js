@@ -191,4 +191,3 @@ newALink.target = "blank";
 console.log(newALink);
 
 getBody.appendChild(newALink);
-// 14 number er 12 number ta ses 13  number ta start

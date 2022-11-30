@@ -90,47 +90,71 @@ const warriorsGames = [
   },
 ];
 
-const getBody = document.querySelector("body");
+const colors = [
+  "chartreuse",
+  " darkblue",
+  " darkgreen",
+  " darkred",
+  "crimson",
+  " deeppink",
+  " orangered",
+];
 
+// const getBody = document.querySelector("body");
+
+// const ulParent = document.createElement("ul");
+
+// for (let game of warriorsGames) {
+//   const { homeTeam, awayTeam } = game;
+//   const newLi = document.createElement("li");
+//   ulParent.appendChild(newLi);
+//   newLi.innerText = `${homeTeam.team} @ ${awayTeam.team}`;
+// }
+// getBody.appendChild(ulParent);
+
+const getBody = document.querySelector("body");
 const ulParent = document.createElement("ul");
 
 for (let game of warriorsGames) {
   const { homeTeam, awayTeam } = game;
   const newLi = document.createElement("li");
+
+  const { team: hTeam, points: hPoints } = homeTeam;
+  const { team: aTeam, points: aPoints } = awayTeam;
+
+  const teamNames = `${hTeam} @ ${aPoints}`;
+  let scoreLine;
+  if (aPoints > hPoints) {
+    scoreLine = `<b>${aTeam} </b>- ${hPoints}`;
+  } else {
+    scoreLine = `${aTeam} -<b> ${hPoints}</b>`;
+  }
+
+  const warriors = hTeam === "Golden State" ? homeTeam : awayTeam;
+  newLi.classList.add(warriors.isWinner ? "win" : "loss");
+
+  newLi.innerHTML = `${teamNames} ${scoreLine}`;
+
+  newLi.classList.add("colorLi");
   ulParent.appendChild(newLi);
-  newLi.innerText = `${homeTeam.team} @ ${awayTeam.team}`;
 }
+
 getBody.appendChild(ulParent);
 
+const getLiByClass = document.querySelectorAll(".colorLi");
+console.log(getLiByClass);
+
 //..............................................
-
-const allLi = document.querySelectorAll("li");
-const colors = ["red", "green", "ornage", "blue", "purple", "pink"];
-
-// allLi.forEach(function (li, i) {
+// aager practice part//
+// getLiByClass.forEach(function (li, i) {
 //   const color = colors[i];
 //   li.style.color = color;
 // });
 
-// allLi.forEach(function (li, i) {
-//   const color = colors[i];
-//   li.style.color = color;
-// });
-
-// for (let i = 0; i < allLi.length; i++) {
-//   allLi[i].style.color = colors[i];
-// }
-
-// allLi.forEach(function (li, i) {
-//   const color = colors[i];
-//   li.style.color = color;
-// });
-
-// allLi.forEach(function (li, i) {
-//   const color = colors[i];
-//   li.style.color = color;
-// });
-
-for (let i = 0; i < allLi.length; i++) {
-  allLi[i].style.color = colors[i];
+for (let i = 0; i < getLiByClass.length; i++) {
+  const li = getLiByClass[i];
+  li.style.color = colors[i];
 }
+//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+// 14 number er 13 number ta ses 14  number ta start
