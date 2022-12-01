@@ -191,15 +191,138 @@ console.log(bookRatingBigToSmall);
 
 console.log("=========== xxxxxxx ==========");
 
-const getLi = document.querySelectorAll("li");
-const colors = ["red", "green", "orangered", "blue", "purple", "pink"];
+const warriorsGames = [
+  {
+    awayTeam: {
+      team: "Golden State",
+      points: 119,
+      isWinner: true,
+    },
 
-// getLi.forEach(function (li, i) {
-//   li.style.color = colors[i];
-// });
+    homeTeam: {
+      team: "Houston",
+      points: 106,
+      isWinner: false,
+    },
+  },
 
-for (let i = 0; i < getLi.length; i++) {
-  // getLi[i].style.color = colors[i];
-  getLi[i].style.backgroundColor = colors[i];
-  console.log(getLi[i], colors[i]);
+  {
+    awayTeam: {
+      team: "Golden State",
+      points: 105,
+      isWinner: false,
+    },
+    homeTeam: {
+      team: "Houston",
+      points: 127,
+      isWinner: true,
+    },
+  },
+
+  {
+    homeTeam: {
+      team: "Golden State",
+      points: 126,
+      isWinner: true,
+    },
+    awayTeam: {
+      team: "Houston",
+      points: 85,
+      isWinner: false,
+    },
+  },
+
+  {
+    homeTeam: {
+      team: "Golden State",
+      points: 92,
+      isWinner: false,
+    },
+    awayTeam: {
+      team: "Houston",
+      points: 95,
+      isWinner: false,
+    },
+  },
+
+  {
+    awayTeam: {
+      team: "Golden State",
+      points: 94,
+      isWinner: false,
+    },
+    homeTeam: {
+      team: "Houston",
+      points: 98,
+      isWinner: true,
+    },
+  },
+  {
+    awayTeam: {
+      team: "Golden State",
+      points: 115,
+      isWinner: true,
+    },
+    homeTeam: {
+      team: "Houston",
+      points: 86,
+      isWinner: false,
+    },
+  },
+  {
+    awayTeam: {
+      team: "Golden State",
+      points: 101,
+      isWinner: true,
+    },
+    homeTeam: {
+      team: "Houston",
+      points: 92,
+      isWinner: false,
+    },
+  },
+];
+
+const colors = [
+  "green",
+  " darkblue",
+  " darkgreen",
+  " darkred",
+  "crimson",
+  " deeppink",
+  " orangered",
+];
+
+const getBody = document.querySelector("body");
+const ulParent = document.createElement("ul");
+console.log(ulParent);
+
+for (game of warriorsGames) {
+  const { homeTeam, awayTeam } = game;
+  const gameLi = document.createElement("li");
+
+  const { team: hTeam, points: hPoints } = homeTeam;
+  const { team: aTeam, points: aPoints } = awayTeam;
+
+  const teamName = `${aTeam} @ ${hTeam}`;
+
+  let scoreLine;
+  if (aPoints > hPoints) {
+    scoreLine = `<b>${aPoints}</b>-${hPoints}`;
+  } else {
+    scoreLine = `${aPoints}-<b>${hPoints}</b>`;
+  }
+
+  const warriors = hTeam === "Golden State" ? homeTeam : awayTeam;
+  gameLi.classList.add(warriors.isWinner ? "win" : "loss");
+  gameLi.innerHTML = `${teamName} ${scoreLine}`;
+  ulParent.appendChild(gameLi);
 }
+
+getBody.appendChild(ulParent);
+
+const colorLi = document.querySelectorAll("li");
+colorLi.forEach(function (li, i) {
+  const color = colors[i];
+  li.style.color = color;
+});
