@@ -293,35 +293,72 @@ const colors = [
   " orangered",
 ];
 
+// const getBody = document.querySelector("body");
+// const ulParent = document.createElement("ul");
+// console.log(ulParent);
+
+// for (game of warriorsGames) {
+//   const { homeTeam, awayTeam } = game;
+//   const gameLi = document.createElement("li");
+
+//   const { team: hTeam, points: hPoints } = homeTeam;
+//   const { team: aTeam, points: aPoints } = awayTeam;
+
+//   const teamName = `${aTeam} @ ${hTeam}`;
+
+//   let scoreLine;
+//   if (aPoints > hPoints) {
+//     scoreLine = `<b>${aPoints}</b>-${hPoints}`;
+//   } else {
+//     scoreLine = `${aPoints}-<b>${hPoints}</b>`;
+//   }
+
+//   const warriors = hTeam === "Golden State" ? homeTeam : awayTeam;
+//   gameLi.classList.add(warriors.isWinner ? "win" : "loss");
+//   gameLi.innerHTML = `${teamName} ${scoreLine}`;
+//   ulParent.appendChild(gameLi);
+// }
+
+// getBody.appendChild(ulParent);
+
+// const colorLi = document.querySelectorAll("li");
+// colorLi.forEach(function (li, i) {
+//   const color = colors[i];
+//   li.style.color = color;
+// });
+
+///////////////////////////////////////////////////////
+
 const getBody = document.querySelector("body");
+
 const ulParent = document.createElement("ul");
 console.log(ulParent);
-
 for (game of warriorsGames) {
   const { homeTeam, awayTeam } = game;
   const gameLi = document.createElement("li");
+  ulParent.appendChild(gameLi);
 
   const { team: hTeam, points: hPoints } = homeTeam;
   const { team: aTeam, points: aPoints } = awayTeam;
 
-  const teamName = `${aTeam} @ ${hTeam}`;
+  const teamName = `${hTeam} @ ${aTeam}`;
 
   let scoreLine;
   if (aPoints > hPoints) {
-    scoreLine = `<b>${aPoints}</b>-${hPoints}`;
+    scoreLine = `<b>${hPoints}</b>-${aPoints}`;
   } else {
-    scoreLine = `${aPoints}-<b>${hPoints}</b>`;
+    scoreLine = `${hPoints}-<b>${aPoints}</b>`;
   }
-
   const warriors = hTeam === "Golden State" ? homeTeam : awayTeam;
   gameLi.classList.add(warriors.isWinner ? "win" : "loss");
+
   gameLi.innerHTML = `${teamName} ${scoreLine}`;
-  ulParent.appendChild(gameLi);
 }
 
 getBody.appendChild(ulParent);
 
 const colorLi = document.querySelectorAll("li");
+
 colorLi.forEach(function (li, i) {
   const color = colors[i];
   li.style.color = color;
