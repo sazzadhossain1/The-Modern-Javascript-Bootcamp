@@ -159,13 +159,44 @@ for (let i = 0; i < getLiByClass.length; i++) {
 //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-const btn = document.querySelector("#clicker");
+// const btn = document.querySelector("#clicker");
 // btn.addEventListener("click", function () {
 //   console.log("dfdfd");
 // });
 // console.log(btn);
 
-btn.onclick = function () {
-  alert("kdsfkdaslfjasdfdfasdf");
-};
+// btn.onclick = function () {
+//   alert("kdsfkdaslfjasdfdfasdf");
+// };
+
+const btn = document.querySelector("button");
+// btn.addEventListener("click", function () {
+//   alert("sdfadfdsaf");
+// });
+// btn.addEventListener("mouseover", function () {
+//   btn.innerText = "Stope Touching Me";
+// });
+
+// btn.addEventListener("mouseout", function () {
+//   btn.innerText = "Click Me Dooud";
+// });
+
+// window.addEventListener("scroll", function () {
+//   alert("Don't scrolling me");
+// });
+//...............................................
+
+btn.addEventListener("mouseover", function () {
+  console.log("MOUSED OVER ME!");
+  const hight = Math.floor(Math.random() * window.innerHeight);
+  const width = Math.floor(Math.random() * window.innerWidth);
+  btn.style.top = `${hight}px`;
+  btn.style.left = `${width}px`;
+});
+const body = document.querySelector("body");
+btn.addEventListener("click", function () {
+  body.style.backgroundColor = "green";
+  btn.style.height = "100px";
+  btn.style.width = "200px";
+});
 // 15 number er 2 number ta ses 3  number ta start
