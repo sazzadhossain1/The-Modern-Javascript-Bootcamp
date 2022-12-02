@@ -329,37 +329,40 @@ const colors = [
 
 ///////////////////////////////////////////////////////
 
-const getBody = document.querySelector("body");
+const makeChart = (games) => {
+  const getBody = document.querySelector("body");
 
-const ulParent = document.createElement("ul");
-console.log(ulParent);
-for (game of warriorsGames) {
-  const { homeTeam, awayTeam } = game;
-  const gameLi = document.createElement("li");
-  ulParent.appendChild(gameLi);
+  const ulParent = document.createElement("ul");
+  console.log(ulParent);
+  for (let game of games) {
+    const { homeTeam, awayTeam } = game;
+    const gameLi = document.createElement("li");
+    ulParent.appendChild(gameLi);
 
-  const { team: hTeam, points: hPoints } = homeTeam;
-  const { team: aTeam, points: aPoints } = awayTeam;
+    const { team: hTeam, points: hPoints } = homeTeam;
+    const { team: aTeam, points: aPoints } = awayTeam;
 
-  const teamName = `${hTeam} @ ${aTeam}`;
+    const teamName = `${hTeam} @ ${aTeam}`;
 
-  let scoreLine;
-  if (aPoints > hPoints) {
-    scoreLine = `<b>${hPoints}</b>-${aPoints}`;
-  } else {
-    scoreLine = `${hPoints}-<b>${aPoints}</b>`;
+    let scoreLine;
+    if (aPoints > hPoints) {
+      scoreLine = `<b>${hPoints}</b>-${aPoints}`;
+    } else {
+      scoreLine = `${hPoints}-<b>${aPoints}</b>`;
+    }
+    const warriors = hTeam === "Golden State" ? homeTeam : awayTeam;
+    gameLi.classList.add(warriors.isWinner ? "win" : "loss");
+
+    gameLi.innerHTML = `${teamName} ${scoreLine}`;
   }
-  const warriors = hTeam === "Golden State" ? homeTeam : awayTeam;
-  gameLi.classList.add(warriors.isWinner ? "win" : "loss");
 
-  gameLi.innerHTML = `${teamName} ${scoreLine}`;
-}
+  getBody.appendChild(ulParent);
 
-getBody.appendChild(ulParent);
+  const colorLi = document.querySelectorAll("li");
 
-const colorLi = document.querySelectorAll("li");
-
-colorLi.forEach(function (li, i) {
-  const color = colors[i];
-  li.style.color = color;
-});
+  colorLi.forEach(function (li, i) {
+    const color = colors[i];
+    li.style.color = color;
+  });
+};
+makeChart(warriorsGames);

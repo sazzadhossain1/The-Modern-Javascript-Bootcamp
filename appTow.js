@@ -156,5 +156,16 @@ for (let i = 0; i < getLiByClass.length; i++) {
   li.style.color = colors[i];
 }
 //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-// 14 number er 13 number ta ses 14  number ta start
+const btn = document.querySelector("#clicker");
+// btn.addEventListener("click", function () {
+//   console.log("dfdfd");
+// });
+// console.log(btn);
+
+btn.onclick = function () {
+  alert("kdsfkdaslfjasdfdfasdf");
+};
+// 15 number er 2 number ta ses 3  number ta start
