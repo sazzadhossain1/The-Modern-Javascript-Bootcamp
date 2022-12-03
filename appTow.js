@@ -199,4 +199,3 @@ btn.addEventListener("click", function () {
   btn.style.height = "100px";
   btn.style.width = "200px";
 });
-// 15 number er 2 number ta ses 3  number ta start
