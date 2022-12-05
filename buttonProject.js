@@ -168,3 +168,20 @@ getinput.addEventListener("keypress", function (e) {
     this.value = "";
   }
 });
+////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+
+const form = document.querySelector("#signup-form");
+
+const creditCardInput = document.querySelector("#cc");
+const termsCheckbox = document.querySelector("#terms");
+const veggieSelect = document.querySelector("#veggie");
+
+form.addEventListener("submit", function (e) {
+  alert("SUBMITTED THE FORM");
+  e.preventDefault();
+  console.log("cc", creditCardInput.value);
+  console.log("terms", termsCheckbox.checked);
+  console.log("veggieSelect", veggieSelect.value);
+});
