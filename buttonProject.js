@@ -62,20 +62,35 @@ console.log("------------- Practice ------------");
 
 //................................................
 
+// const constainer = document.querySelector("#boxes");
+// const h1 = document.querySelector("h1");
+
+// function h1ColorChangeFunction(e) {
+//   h1.style.color = this.style.backgroundColor;
+// }
+// for (let color of colors) {
+//   const divBox = document.createElement("div");
+//   divBox.classList.add("box");
+//   divBox.style.backgroundColor = color;
+//   constainer.appendChild(divBox);
+
+//   divBox.addEventListener("click", h1ColorChangeFunction);
+// }
+
 const constainer = document.querySelector("#boxes");
 const h1 = document.querySelector("h1");
 
-function h1ColorChangeFunction(e) {
-  h1.style.color = this.style.backgroundColor;
-}
 for (let color of colors) {
   const divBox = document.createElement("div");
   divBox.classList.add("box");
-  divBox.style.backgroundColor = color;
   constainer.appendChild(divBox);
+  divBox.style.backgroundColor = color;
 
-  divBox.addEventListener("click", h1ColorChangeFunction);
+  divBox.addEventListener("mouseover", function () {
+    h1.style.color = divBox.style.backgroundColor;
+  });
 }
+
 console.log("--------------xxxxxxx-------------");
 
 // const addItemInput = document.querySelector("#addItem");
@@ -153,4 +168,3 @@ getinput.addEventListener("keypress", function (e) {
     this.value = "";
   }
 });
-// 15 number er 7 number ta ses 8  number ta start
