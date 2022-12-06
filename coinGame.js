@@ -45,4 +45,3 @@ const moveCoin = () => {
   coin.style.left = `${x}px`;
 };
 moveCoin();
-// 15 number er 8 number ta ses9  number ta start

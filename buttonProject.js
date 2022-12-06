@@ -178,10 +178,27 @@ const creditCardInput = document.querySelector("#cc");
 const termsCheckbox = document.querySelector("#terms");
 const veggieSelect = document.querySelector("#veggie");
 
-form.addEventListener("submit", function (e) {
-  alert("SUBMITTED THE FORM");
-  e.preventDefault();
-  console.log("cc", creditCardInput.value);
-  console.log("terms", termsCheckbox.checked);
-  console.log("veggieSelect", veggieSelect.value);
+// form.addEventListener("submit", function (e) {
+//   alert("SUBMITTED THE FORM");
+//   e.preventDefault();
+//   console.log("cc", creditCardInput.value);
+//   console.log("terms", termsCheckbox.checked);
+//   console.log("veggieSelect", veggieSelect.value);
+// });
+
+////////////////////////////////////////////////////////////////
+const formData = {};
+creditCardInput.addEventListener("input", (e) => {
+  console.log("cc changed!", e);
+  formData["cc"] = e.target.value;
+});
+
+veggieSelect.addEventListener("input", (e) => {
+  console.log("cc vaggie", e);
+  formData["veggie"] = e.target.value;
+});
+
+termsCheckbox.addEventListener("input", (e) => {
+  console.log("checkbox", e);
+  formData["agreeToTerms"] = e.target.checked;
 });
