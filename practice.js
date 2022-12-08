@@ -293,76 +293,157 @@ const colors = [
   " orangered",
 ];
 
-// const getBody = document.querySelector("body");
-// const ulParent = document.createElement("ul");
-// console.log(ulParent);
+const getBody = document.querySelector("body");
+const ulParent = document.createElement("ul");
+
+for (game of warriorsGames) {
+  const { homeTeam, awayTeam } = game;
+  const gameLi = document.createElement("li");
+
+  const { team: hTeam, points: hPoints } = homeTeam;
+  const { team: aTeam, points: aPoints } = awayTeam;
+
+  const teamName = `${aTeam} @ ${hTeam}`;
+
+  let scoreLine;
+  if (aPoints > hPoints) {
+    scoreLine = `<b>${aPoints}</b>-${hPoints}`;
+  } else {
+    scoreLine = `${aPoints}-<b>${hPoints}</b>`;
+  }
+
+  const warriors = hTeam === "Golden State" ? homeTeam : awayTeam;
+  gameLi.classList.add(warriors.isWinner ? "win" : "loss");
+  gameLi.innerHTML = `${teamName} ${scoreLine}`;
+  ulParent.appendChild(gameLi);
+}
+const hr = document.createElement("hr");
+ulParent.appendChild(hr);
+
+const hr2 = document.createElement("hr");
+ulParent.appendChild(hr2);
+
+const hr3 = document.createElement("hr");
+ulParent.appendChild(hr3);
+
+getBody.appendChild(ulParent);
+
+const colorLi = document.querySelectorAll("li");
+colorLi.forEach(function (li, i) {
+  const color = colors[i];
+  li.style.color = color;
+});
+
+///////////////////////////////////////////////////////
+
+// const makeChart = (games) => {
+//   const getBody = document.querySelector("body");
+//   const ulParent = document.createElement("ul");
+//   for (let game of games) {
+//     const { homeTeam, awayTeam } = game;
+//     const gameLi = document.createElement("li");
+//     ulParent.appendChild(gameLi);
+
+//     const { team: hTeam, points: hPoints } = homeTeam;
+//     const { team: aTeam, points: aPoints } = awayTeam;
+
+//     const teamName = `${hTeam} @ ${aTeam}`;
+
+//     let scoreLine;
+//     if (aPoints > hPoints) {
+//       scoreLine = `<b>${hPoints}</b>-${aPoints}`;
+//     } else {
+//       scoreLine = `${hPoints}-<b>${aPoints}</b>`;
+//     }
+//     const warriors = hTeam === "Golden State" ? homeTeam : awayTeam;
+//     gameLi.classList.add(warriors.isWinner ? "win" : "loss");
+
+//     gameLi.innerHTML = `${teamName} ${scoreLine}`;
+//   }
+
+//   getBody.appendChild(ulParent);
+
+//   const colorLi = document.querySelectorAll("li");
+
+//   colorLi.forEach(function (li, i) {
+//     const color = colors[i];
+//     li.style.color = color;
+//   });
+// };
+// makeChart(warriorsGames);
+
+////////////////////////////////////////////////
+///////////////////////////////////////////////
+//////////////////////////////////////////////
+
+// const getBodyAgain = document.querySelector("body");
+// const ulParentAgain = document.createElement("ul");
 
 // for (game of warriorsGames) {
 //   const { homeTeam, awayTeam } = game;
-//   const gameLi = document.createElement("li");
+//   const gameliAgain = document.createElement("li");
 
 //   const { team: hTeam, points: hPoints } = homeTeam;
 //   const { team: aTeam, points: aPoints } = awayTeam;
-
 //   const teamName = `${aTeam} @ ${hTeam}`;
+//   gameliAgain.classList.add("li");
+//   ulParentAgain.appendChild(gameliAgain);
+//   getBodyAgain.appendChild(ulParentAgain);
 
 //   let scoreLine;
 //   if (aPoints > hPoints) {
-//     scoreLine = `<b>${aPoints}</b>-${hPoints}`;
+//     scoreLine = `<b>${hPoints}</b>-${aPoints}`;
 //   } else {
-//     scoreLine = `${aPoints}-<b>${hPoints}</b>`;
+//     scoreLine = `${hPoints}-<b>${aPoints}</b>`;
 //   }
 
-//   const warriors = hTeam === "Golden State" ? homeTeam : awayTeam;
-//   gameLi.classList.add(warriors.isWinner ? "win" : "loss");
-//   gameLi.innerHTML = `${teamName} ${scoreLine}`;
-//   ulParent.appendChild(gameLi);
+// const warriors = hTeam === "Golden State" ? homeTeam : awayTeam;
+// gameliAgain.classList.add(warriors.isWinner ? "win" : "loss");
+// gameliAgain.innerHTML = `${teamName} ${scoreLine}`;
+// ulParent.appendChild(gameliAgain);
 // }
 
-// getBody.appendChild(ulParent);
-
-// const colorLi = document.querySelectorAll("li");
-// colorLi.forEach(function (li, i) {
+// const colorLiAgain = document.querySelectorAll(".li");
+// colorLiAgain.forEach(function (li, i) {
 //   const color = colors[i];
 //   li.style.color = color;
 // });
 
 ///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
 
-const makeChart = (games) => {
-  const getBody = document.querySelector("body");
+const getBodyAgain = document.querySelector("body");
+const ulParentAgain = document.querySelector("ul");
 
-  const ulParent = document.createElement("ul");
-  console.log(ulParent);
-  for (let game of games) {
-    const { homeTeam, awayTeam } = game;
-    const gameLi = document.createElement("li");
-    ulParent.appendChild(gameLi);
+for (let game of warriorsGames) {
+  const { homeTeam, awayTeam } = game;
 
-    const { team: hTeam, points: hPoints } = homeTeam;
-    const { team: aTeam, points: aPoints } = awayTeam;
+  const { team: hTeam, points: hPoints } = homeTeam;
+  const { team: aTeam, points: aPoints } = awayTeam;
 
-    const teamName = `${hTeam} @ ${aTeam}`;
+  const teamName = `${hTeam}@${aTeam}`;
 
-    let scoreLine;
-    if (aPoints > hPoints) {
-      scoreLine = `<b>${hPoints}</b>-${aPoints}`;
-    } else {
-      scoreLine = `${hPoints}-<b>${aPoints}</b>`;
-    }
-    const warriors = hTeam === "Golden State" ? homeTeam : awayTeam;
-    gameLi.classList.add(warriors.isWinner ? "win" : "loss");
+  const createLi = document.createElement("li");
+  createLi.classList.add("li");
 
-    gameLi.innerHTML = `${teamName} ${scoreLine}`;
+  let scoreLine;
+  if (aPoints > hPoints) {
+    scoreLine = `<b>${aPoints}</b>-${hPoints}`;
+  } else {
+    scoreLine = `${aPoints}-<b>${hPoints}</b>`;
   }
 
-  getBody.appendChild(ulParent);
+  const warriors = hTeam === "Golden State" ? homeTeam : awayTeam;
+  createLi.classList.add(warriors.isWinner ? "win" : "loss");
 
-  const colorLi = document.querySelectorAll("li");
+  createLi.innerHTML = `${teamName} ${scoreLine}`;
+  ulParentAgain.appendChild(createLi);
+}
 
-  colorLi.forEach(function (li, i) {
-    const color = colors[i];
-    li.style.color = color;
-  });
-};
-makeChart(warriorsGames);
+const getLi = document.querySelectorAll(".li");
+getLi.forEach(function (li, i) {
+  const color = colors[i];
+  li.style.color = color;
+  console.log(color);
+});

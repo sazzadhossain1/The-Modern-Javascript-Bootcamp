@@ -35,5 +35,3 @@ const movex = (element, amount, delay, callBack) => {
 movex(btn, 100, 1000, () => {
   movex(btn, 200, 1000);
 });
-
-// 16 number er 5 number ta ses 6 number ta start

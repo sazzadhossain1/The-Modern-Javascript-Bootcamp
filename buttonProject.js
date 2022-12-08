@@ -83,8 +83,8 @@ const h1 = document.querySelector("h1");
 for (let color of colors) {
   const divBox = document.createElement("div");
   divBox.classList.add("box");
-  constainer.appendChild(divBox);
   divBox.style.backgroundColor = color;
+  constainer.appendChild(divBox);
 
   divBox.addEventListener("mouseover", function () {
     h1.style.color = divBox.style.backgroundColor;
