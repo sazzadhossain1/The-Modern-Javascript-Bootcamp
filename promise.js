@@ -130,30 +130,40 @@ console.log("----------- Fetch ------------");
 //   }
 // }
 
-function fetchUser() {
-  fetch("https://randomuser.me/api/?results=50")
-    .then((res) => res.json())
-    .then((data) => {
-      displayUser(data);
-    });
-}
+// function fetchUser() {
+//   fetch("https://randomuser.me/api/?results=50")
+//     .then((res) => res.json())
+//     .then((data) => {
+//       displayUser(data);
+//     });
+// }
 
-fetchUser();
-function displayUser(data) {
-  const users = data.results;
-  for (let user of users) {
-    console.log(user);
-    const getUser = document.querySelector("#user");
-    getUser.innerHTML += `<div class="card" style="width: 18rem;">
-    <img src=${user.picture.large} class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">${user.name.title} ${user.name.first} ${user.name.last}</h5>
-      <p class="card-text">Email: ${user.email}</p>
-      <p class="card-text">Phone No: ${user.phone}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>`;
-  }
-}
+// fetchUser();
+// function displayUser(data) {
+//   const users = data.results;
+//   for (let user of users) {
+//     console.log(user);
+//     const getUser = document.querySelector("#user");
+//     getUser.innerHTML += `<div class="card" style="width: 18rem;">
+//     <img src=${user.picture.large} class="card-img-top" alt="...">
+//     <div class="card-body">
+//       <h5 class="card-title">${user.name.title} ${user.name.first} ${user.name.last}</h5>
+//       <p class="card-text">Email: ${user.email}</p>
+//       <p class="card-text">Phone No: ${user.phone}</p>
+//       <a href="#" class="btn btn-primary">Go somewhere</a>
+//     </div>
+//   </div>`;
+//   }
+// }
 
-// 18 number er 1 number ta ses 2  number ta start
+fetch("https://jsonplaceholder.typicode.com/photos")
+  .then((res) => res.json())
+  .then((data) => {
+    for (let da of data) {
+      console.log(da);
+    }
+  })
+  .catch((err) => {
+    console.log("SOMTHING WENT WRONG WITH FETCH");
+    console.log(err);
+  });
