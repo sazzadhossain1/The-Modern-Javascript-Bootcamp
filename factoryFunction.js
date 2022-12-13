@@ -84,4 +84,59 @@ console.log(personeOne);
 
 const fullName = `${personeOne.firName} ${personeOne.lasName} and she's Deth of Birth is ${personeOne.dob}`;
 console.log(fullName);
-// 19 number er 4 number ta ses 5 number ta start
+
+//////////////////////////////////////////////////////
+//                     js class                    //
+////////////////////////////////////////////////////
+
+class Color {
+  constructor(r, g, b, name) {
+    this.r = r;
+    this.g = g;
+    this.b = b;
+    this.name = name;
+  }
+}
+
+const cl = new Color(255, 67, 89, "tomato");
+console.log(cl);
+
+/**.................................................
+ * ................................................
+ * ///////////////////////////////////////////////
+ */
+
+class Pet {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  eat() {
+    return `${this.name} is eating`;
+  }
+}
+
+class Cat {
+  meow() {
+    return "MEOWWWW!!!!";
+  }
+}
+
+const monty = new Cat("monty", 5);
+console.log(monty);
+// const ca = monty.eat();
+// console.log(ca);
+
+//////////////////////////////////////////////////
+
+class Dog {
+  bark() {
+    return "WOOF!!!!!";
+  }
+}
+
+const dogSName = new Dog("moyna", 5);
+console.log(dogSName);
+
+// const moynaDoing = dogSName.eat();
+// console.log(moynaDoing);

@@ -104,31 +104,31 @@ console.log("----------- Fetch ------------");
 
 ///////////////////////////////////////////////////////////////
 
-// const getBodyl = document.querySelector("body");
+const getBodyl = document.querySelector("body");
 
-// function getData() {
-//   fetch("https://jsonplaceholder.typicode.com/users")
-//     .then((res) => res.json())
-//     .then((res) => loadData(res));
-// }
-// getData();
+function getData() {
+  fetch("https://jsonplaceholder.typicode.com/users")
+    .then((res) => res.json())
+    .then((res) => loadData(res));
+}
+getData();
 
-// function loadData(data) {
-//   for (let da of data) {
-//     console.log(da);
-//     const getDiv = document.querySelector(".card");
-//     getDiv.innerHTML += `<img src="..." class="card-img-top" alt="..." />
-//     <div class="card-body">
-//       <h5 class="card-title">${da.name}</h5>
-//       <p class="card-text">
-//         ${da.company.bs}
-//         ${da.company.bs}
-//         ${da.company.bs}
-//       </p>
-//       <a href="#" class="btn btn-primary">Go somewhere</a>
-//     </div>`;
-//   }
-// }
+function loadData(data) {
+  for (let da of data) {
+    console.log(da);
+    const getDiv = document.querySelector(".card");
+    getDiv.innerHTML += `<img src=${da.thumbnailUrl} class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">${da.name}</h5>
+      <p class="card-text">
+        ${da.company.bs}
+        ${da.company.bs}
+        ${da.company.bs}
+      </p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>`;
+  }
+}
 
 // function fetchUser() {
 //   fetch("https://randomuser.me/api/?results=50")
